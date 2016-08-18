@@ -14,9 +14,9 @@ public class ContactInsert {
 		Connection conn = null;
 
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/world", "root", "1234");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kosta10", "root", "1234");
 
-			String sql = "INSERT INTO contact (name, email, age, address) VALUES (?,?,?,?);";
+			String sql = "INSERT INTO contacts (name, email, age, addr) VALUES (?,?,?,?);";
 
 			String[] read = InsertWrite();
 

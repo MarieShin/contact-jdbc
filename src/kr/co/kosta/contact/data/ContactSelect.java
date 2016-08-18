@@ -11,10 +11,10 @@ public class ContactSelect {
 		Connection conn = null;
 
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/world", "root", "1234");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kosta10", "root", "1234");
 			System.out.println("connection ok...");
 
-			String sql = "select name, email, age, address from contact";
+			String sql = "select name, email, age, addr from contacts";
 
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
@@ -25,7 +25,7 @@ public class ContactSelect {
 				String name = rs.getString("name");
 				String email = rs.getString("email");
 				int age = rs.getInt("age");
-				String address = rs.getString("address");
+				String address = rs.getString("addr");
 
 				System.out.println("[" + name + " " + email + " " + age + " " + address + "]");
 			}
